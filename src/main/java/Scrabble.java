@@ -31,7 +31,7 @@ public class Scrabble {
         lettersPoints.put("y", 4);
         lettersPoints.put("k", 5);
         lettersPoints.put("j", 8);
-        lettersPoints.put("k", 8);
+        lettersPoints.put("x", 8);
         lettersPoints.put("q", 10);
         lettersPoints.put("z", 10);
 

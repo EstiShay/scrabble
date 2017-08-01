@@ -21,4 +21,11 @@ public class ScrabbleTest {
         assertEquals(expected, testScrabble.calculateScore("no"));
     }
 
+    @Test
+    public void calculateScore_returnsScoreForLongWord_25 () throws Exception {
+        Scrabble testScrabble = new Scrabble();
+        Integer expected = 25;
+        assertEquals(expected, testScrabble.calculateScore("quickly"));
+    }
+
 }
