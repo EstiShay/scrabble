@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class Scrabble {
 
-    public Integer calculateScore(String letter) {
+    public Integer calculateScore(String play) {
         Map<String, Integer> lettersPoints = new HashMap<String, Integer>();
         lettersPoints.put("a", 1);
         lettersPoints.put("e", 1);
@@ -37,8 +37,13 @@ public class Scrabble {
 
         Integer result = 0;
 
-        Integer score = lettersPoints.get(letter);
-        result += score;
+        char[] letters = play.toCharArray();
+
+        for ( char individualChar : letters) {
+            String charToString = Character.toString(individualChar);
+            Integer score = lettersPoints.get(charToString);
+            result += score;
+        }
 
         return result;
     }
